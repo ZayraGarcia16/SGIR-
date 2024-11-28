@@ -1,0 +1,70 @@
+### Crear un nuevo paquete
+POST http://localhost:7700/api/paquete HTTP/1.1
+Content-Type: application/json
+
+{
+    "destino": "Santa Marta",
+    "actividad": "buseo",
+    "numeroPersonas": 8,
+    "categoria": "paquete1",
+    "precio": 100000,
+    "transporte": "bus",
+    "comida": "todoincluido",
+    "imagen": "http://www.ejemplo.com/imagen.jpg"
+}
+
+
+###
+
+### Obtener todos los paquetes
+GET http://localhost:7700/api/paquete HTTP/1.1
+###
+
+### Obtener un paquete específico por ID
+GET http://localhost:7700/api/paquete/67282a47404d29c3a729b47a HTTP/1.1
+###
+
+### Actualizar un paquete específico por ID
+PUT http://localhost:7700/api/paquete/672319b7761480d7fa6b08d0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "destino": "San Andres",
+    "actividad": "sorft",
+    "numeroPersonas": 4,
+    "categoria": 3,
+    "precio": "1620000",
+    "transporte":  "avion",
+    "comida": "almuerzo incluido",
+    "imagen": "jpj.35"
+}
+###
+
+### Eliminar un paquete específico por ID
+DELETE http://localhost:7700/api/paquete/6723256cd3ec2f85890b0357 HTTP/1.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

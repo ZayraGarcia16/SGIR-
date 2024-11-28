@@ -1,0 +1,42 @@
+###
+
+POST http://localhost:7700/api/excursiones HTTP/1.1
+Content-Type: application/json
+
+{
+    "categoria": "excursion 2",
+    "destino": "Santa Marta",
+    "precio": 1500000,
+    "duracion": "8 dias",
+    "transporte": "Bus",
+    "comida": "Variedad",
+    "actividad": "Mar"
+}
+###
+
+GET http://localhost:7700/api/excursiones HTTP/1.1
+
+###
+
+GET http://localhost:7700/api/excursiones/6745fae1141eda723c488e1e HTTP/1.1
+
+###
+
+PUT http://localhost:7700/api/excursiones/6745fae1141eda723c488e1e HTTP/1.1
+Content-Type: application/json
+
+{
+    "categoria": "excursion 1",
+    "destino": "Cartagena",
+    "precio": 2100000,
+    "duracion": "12 dias",
+    "transporte": "Avion, Bus",
+    "comida": "Variedad",
+    "actividad": "Fiesta Blanca, Chiva Rumbera"
+}
+
+###
+
+DELETE http://localhost:7700/api/excursiones/6745fae1141eda723c488e1e HTTP/1.1
+
+###

@@ -1,0 +1,31 @@
+###
+POST http://localhost:7700/api/admin HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombreCompleto": "Maria Quiñones",
+    "correo": "Maria@gmail.com",
+    "nit": "65748888",
+    "contraseña": "maria78456"
+}
+
+###
+GET http://localhost:7700/api/admin HTTP/1.1
+
+### 
+GET http://localhost:7700
+###
+PUT http://localhost:7700/api/admin/673e15a63d5618f26d5fe10c HTTP/1.1
+Content-Type: application/json
+
+{    
+    "nombreCompleto": "Danielito fernandez Escamilla",
+    "correo": "danielito@gmail.com",
+    "nit": "735467",
+    "contraseña": "kt3457889"
+    
+    
+}
+
+###
+DELETE http://localhost:7700/api/admin/673e5282dab9da3fedb17717 HTTP/1.1
