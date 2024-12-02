@@ -31,7 +31,7 @@ export const obtenercomentario = (req, resp) => {
 export const consultarcomentario = [
   validatorHandler(getComentarioSchema, "params"),
   async (req, resp) => {
-    const { id } = req.params;
+    const { id } = req.params; // extraigo el id del comentario
     try {
       const comentario = await comentarioSchema.findById(id);
       if (!comentario) {
@@ -54,12 +54,12 @@ export const actualizarcomentario = [
   validatorHandler(updateComentarioSchema, "body"),
   async (req, resp) => {
     const { id } = req.params;
-    const { nombreCompleto, comentario, valoracion, opinion } = req.body;
+    const { nombreCompleto, valoracion, opinion } = req.body;
 
     try {
       const actualizarcomentario = await comentarioSchema.updateOne(
         { _id: id },
-        { $set: { nombreCompleto, comentario, valoracion, opinion } }
+        { $set: { nombreCompleto, valoracion, opinion } }
       );
 
       if (actualizarcomentario.matchedCount === 0) {

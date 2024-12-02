@@ -24,17 +24,7 @@ const nombreCompleto = Joi.string()
     "any.required": "El nombre completo es un campo requerido.",
   });
 
-const comentario = Joi.string()
-  .min(3)
-  .max(500)
-  .required()
-  .messages({
-    "string.base": "El comentario debe ser un texto.",
-    "string.empty": "El comentario no puede estar vacío.",
-    "string.min": "El comentario debe tener al menos 3 caracteres.",
-    "string.max": "El comentario no puede exceder los 500 caracteres.",
-    "any.required": "El comentario es un campo requerido.",
-  });
+
 
 const valoracion = Joi.number()
   .integer()
@@ -62,25 +52,23 @@ const opinion = Joi.string()
 // Esquemas de validación
 const createComentarioSchema = Joi.object({
   nombreCompleto: nombreCompleto.required(),
-  comentario: comentario.required(),
   valoracion: valoracion.required(),
   opinion: opinion,
-});
+}).unknown();
 
 const updateComentarioSchema = Joi.object({
   nombreCompleto: nombreCompleto,
-  comentario: comentario,
   valoracion: valoracion,
   opinion: opinion,
-});
+}).unknown();
 
 const getComentarioSchema = Joi.object({
   id: id.required(),
-});
+}).unknown();
 
 const deleteComentarioSchema = Joi.object({
   id: id.required(),
-});
+}).unknown();
 
 export {
   createComentarioSchema,
