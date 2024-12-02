@@ -1,0 +1,48 @@
+### Crear una nuevo reserva
+POST http://localhost:7707/api/reservas HTTP/1.1
+Content-Type: application/json
+
+{
+  "tipoDocumento": "Cédula de Ciudadanía",
+  "numeroDocumento": 123455778,
+  "nombreCliente": "Juan Pérez",
+  "fechaSalida": "2024-12-15",
+  "fechaRegreso": "2024-12-20",
+  "destino": "Medellín",
+  "numeroContacto": "3214567890",
+  "correoElectronico": "juan.perez@example.com",
+  "cantidadPersonas": 2,
+  "alojamiento": "Hotel 5 estrellas",
+  "transporte": "Avión",
+  "precioTotal": 1500000,
+  "estado": "Confirmada"
+}
+###
+
+### Obtener todas las reservas
+GET http://localhost:7707/api/reservas HTTP/1.1
+###
+
+### Obtener una reserva específica por ID
+
+GET http://localhost:7707/api/reservas/673dd06e45e9a25ec284d2bb HTTP/1.1
+###
+
+### Actualizar una reserva específica por ID
+
+PUT http://localhost:7707/api/reservas/673d8877976b815d1693fe66 HTTP/1.1
+Content-Type: application/json
+
+{
+    "tipoDocumento": "Pasaporte",
+    "numeroDocumento": 87654321,
+    "nombreCliente": "María López",
+    "destino": "Bogotá",
+    "fechaInicio": "2024-01-10",
+    "fechaRegreso": "2024-01-15",
+    "estado": "Reprogramada"
+}
+###
+
+### Eliminar una reserva específica por ID
+DELETE http://localhost:7707/api/reservas/ HTTP/1.1
