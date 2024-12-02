@@ -1,0 +1,16 @@
+.main-content img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin-top: 3px;
+}
+.main-text h1{
+    font-size: 3rem;
+    padding:40px 0 0 20px;
+    /* color: white; */
+}
+.main-text p{
+    font-size: 22px;
+    padding: 10px;
+    font-weight: 600;
+}

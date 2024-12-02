@@ -1,0 +1,50 @@
+POST http://localhost:7700/api/clientes HTTP/1.1
+content-Type: application/json
+
+{
+  "nombre": "Maria",
+  "apellido": "Quiñones",
+  "correo": "quinonescharrism@gmail.com",
+  "usuario": "maleyoon",
+  "contrasena": "yoongi12",
+  "token": "yoongi14"
+}
+###
+GET http://localhost:7700/api/clientes HTTP/1.1
+
+
+###
+GET http://localhost:7700/api/clientes/6744bd69d5a96aad34da5b3d HTTP/1.1
+
+###
+PUT http://localhost:7700/api/clientes/6744ba4ad5a96aad34da5b36 HTTP/1.1
+Content-Type: application/json
+
+{
+  "nombre": "Maria",
+  "apellido": "Quiñones",
+  "correo": "quinonescharrism@gmail.com",
+  "usuario": "maria12",
+  "contrasena": "1234567m",
+  "token": "yoongi1"
+}
+
+###
+DELETE http://localhost:7700/api/clientes/6744b9c2d5a96aad34da5b31 HTTP/1.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+.card-image img {
+   width: 100%;
+   height: 230px; /* Mantén la altura constante para todas las imágenes */
+   padding: 0; /* Quita el padding extra para compactar */
+   object-fit: cover; /* Asegura que las imágenes mantengan proporciones */
+}
+
+.card-content {
+   padding: 20px; /* Espaciado interno uniforme */
+}
+
+.card-content p {
+   font-size: 16px;
+   line-height: 25px;
+   margin: 10px auto; /* Centra el texto */
+   width: 90%; /* Reduce el ancho para que se ajuste mejor */
+   text-align: justify; /* Mantiene la justificación */
+}
+
+.card-content button {
+   padding: 7px 15px; /* Ajusta el tamaño del botón */
+   font-size: 18px;
+   border-radius: 5px;
+   margin-top: 10px;
+   background-color: coral;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+   background-color: lightsalmon;
+}
+
+.pack-container {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+   justify-content: space-between; /* Espacio entre las tarjetas */
+   margin: 20px 0; /* Espaciado superior e inferior */
+   gap: 15px; /* Espaciado entre tarjetas */
+}
+
+.pack-card {
+   width: 85%; /* Hace las tarjetas más gruesas y cuadradas */
+   background-color: #fff;
+   height: auto; /* Se ajusta automáticamente */
+   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+   padding-bottom: 20px;
+   border-radius: 10px; /* Bordes redondeados */
+}
+
+.card-content span {
+   font-size: 26px;
+   color: orange;
+   margin: 10px 0; /* Ajusta el espacio superior e inferior */
+   display: flex;
+   justify-content: center; /* Centra las estrellas */
+   gap: 5px; /* Espacio entre estrellas */
+}
+
+.card-content h3 {
+   font-size: 20px;
+   text-align: center; /* Centra el precio */
+   margin: 10px 0;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+   .pack-card {
+       width: 45%; /* Las tarjetas ocupan más espacio en pantallas medianas */
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .pack-card {
+       width: 90%; /* Tarjetas a ancho completo en pantallas pequeñas */
+       margin: 0 auto;
+   }
+}

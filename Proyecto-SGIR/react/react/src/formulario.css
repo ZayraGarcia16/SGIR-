@@ -1,0 +1,197 @@
+/* Contenedor Principal del Formulario */
+.formulario-hotel-container {
+  background: rgba(255, 255, 255, 0.7); /* Fondo translúcido con blur */
+  backdrop-filter: blur(15px); /* Efecto de desenfoque */
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 50px auto;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  animation: fadeIn 1s ease-out;
+}
+
+/* Título del Formulario */
+.formulario-hotel-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a9d8f;
+  margin-bottom: 20px;
+  text-shadow: 0px 4px 6px rgba(42, 157, 143, 0.4);
+}
+
+/* Estilo de los Campos del Formulario */
+.formulario-hotel-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  gap: 20px;
+  justify-items: center;
+  text-align: left; /* Alinea el texto de los campos */
+}
+
+/* Etiquetas */
+.formulario-hotel-container label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #264653;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Inputs y Selects */
+.formulario-hotel-container input[type="text"],
+.formulario-hotel-container input[type="number"],
+.formulario-hotel-container select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #2a9d8f;
+  border-radius: 10px;
+  background: rgba(250, 250, 250, 0.9);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Foco en los Inputs */
+.formulario-hotel-container input:focus,
+.formulario-hotel-container select:focus {
+  border-color: #e76f51;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 10px rgba(231, 111, 81, 0.4);
+}
+
+/* Contenedor de los Botones */
+.formulario-hotel-container .botones-container {
+  grid-column: span 2; /* Ocupa ambas columnas */
+  display: flex;
+  gap: 20px; /* Espacio entre los botones */
+  justify-content: center; /* Centra los botones */
+  margin-top: 20px; /* Espacio extra arriba de los botones */
+  align-items: center; /* Alinea los botones verticalmente */
+  
+}
+
+/* Estilo de los Botones */
+/* Estilo de los Botones */
+.formulario-hotel-container button {
+  background: linear-gradient(90deg, #f4a261, #e76f51);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 34px; /* Añadido margen superior para bajar el botón */
+  margin-bottom: 20px;
+  margin-right: 20px
+}
+
+/* Hover sobre los Botones */
+.formulario-hotel-container button:hover {
+  background: linear-gradient(90deg, #e76f51, #f4a261);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Estilo del Contenedor del Formulario en Móviles */
+@media (max-width: 768px) {
+  .formulario-hotel-container form {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
+
+
+.confirmacion-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.check-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reservar-button, .volver-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.reservar-button:hover, .volver-button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.confirmacion-container p {
+  font-size: 16px;
+  color: gray;
+  margin-top: 10px;
+}
+.confirmacion-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.check-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reservar-button, .volver-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.reservar-button:hover, .volver-button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
