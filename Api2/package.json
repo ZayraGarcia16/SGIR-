@@ -1,0 +1,32 @@
+{
+  "name": "api2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "Luna Valentina",
+  "license": "ISC",
+  "dependencies": {
+    "api2": "file:",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "debug": "^4.3.7",
+    "doctrine": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "iconv-lite": "^0.6.3",
+    "is-extglob": "^2.1.1",
+    "joi": "^17.13.3",
+    "mongoose": "^8.8.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "description": ""
+}
