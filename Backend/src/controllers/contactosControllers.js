@@ -1,15 +1,17 @@
 import contactoSchema from "../models/contacto.js"; 
 import { validatorHandler } from "../middleware/validator.handler.js";
-import {createContactoSchema, getContactoSchema, deleteContactoSchema} from "../validators/contactosValidators.js"; 
+import { createContactoSchema, getContactoSchema, deleteContactoSchema } from "../validators/contactosValidators.js"; 
 
 export const createContacto = [
   validatorHandler(createContactoSchema, "body"),
   async (req, res) => {
-    const contacto = new contactoSchema(req.body);
-    await contacto
-      .save()
-      .then((data) => res.status(201).json(data)) 
-      .catch((error) => res.status(500).json({ message: error.message })); 
+    try {
+      const contacto = new contactoSchema(req.body);
+      const data = await contacto.save();
+      res.status(201).json(data); 
+    } catch (error) {
+      res.status(500).json({ message: error.message }); 
+    }
   },
 ];
 

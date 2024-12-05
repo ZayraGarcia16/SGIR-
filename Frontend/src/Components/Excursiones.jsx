@@ -31,9 +31,9 @@ const FormExcursion = () => {
     
         try {
             if (editingId) {
-                await axios.put(`http://localhost:4000/api/excursiones/${editingId}`, formData);
+                await axios.put(`http://localhost:7700/api/excursiones/${editingId}`, formData);
             } else {
-                await axios.post("http://localhost:4000/api/excursiones", formData, {
+                await axios.post("http://localhost:7700/api/excursiones", formData, {
                     headers: { 'Content-Type': 'application/json' } 
                 });
             }
@@ -54,7 +54,7 @@ const FormExcursion = () => {
     
     const obtenerExcursiones = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/api/excursiones");
+            const response = await axios.get("http://localhost:7700/api/excursiones");
             console.log("Excursiones obtenidas:", response.data); // Verifica los datos recibidos
             setExcursiones(response.data);
         } catch (error) {
@@ -71,7 +71,7 @@ const FormExcursion = () => {
     const deleteExcursion = async (id) => {
         if (window.confirm("¿Estás seguro de que deseas eliminar esta excursión?")) {
             try {
-                await axios.delete(`http://localhost:4000/api/excursiones/${id}`);
+                await axios.delete(`http://localhost:7700/api/excursiones/${id}`);
                 obtenerExcursiones(); // Volver a cargar las excursiones después de eliminar
             } catch (error) {
                 console.error("Error al eliminar la excursión:", error);

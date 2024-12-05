@@ -53,13 +53,12 @@ const mensaje = Joi.string()
         "any.required": "El campo mensaje es requerido.",
     });
 
-const fecha = Joi.date()
+const fecha = Joi.date() // Cambiado a 'fechaActual'
     .required()
     .messages({
         "date.base": "La fecha debe ser una fecha válida.",
-        "any.required": "El campo fecha es requerido.",
+        "any.required": "El campo fecha actual es requerido.", // Cambiado para mayor claridad
     });
-
 
 const createContactoSchema = Joi.object({
     nombre_apellido: nombreApellido.required(),

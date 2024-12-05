@@ -1,5 +1,5 @@
 import express from "express";
-import {createContacto, getContacto, getContactoById, deleteContacto} from "../controllers/contactosControllers.js";
+import { createContacto, getContacto, getContactoById, deleteContacto } from "../controllers/contactosControllers.js";
 
 const router = express.Router();
 
@@ -12,26 +12,27 @@ const router = express.Router();
  *       properties:
  *         nombre_apellido:
  *           type: string
- *           description: Nombre y Apellido del cliente que envia el mensaje
+ *           description: Nombre y Apellido del cliente que envía el mensaje
  *         correo:
  *           type: string
- *           description: Correo electronico del cliente 
+ *           description: Correo electrónico del cliente 
  *         asunto: 
  *           type: string
  *           description: Frase clave que caracteriza el mensaje 
  *         mensaje:
  *           type: string
- *           description: Es el mensaje el cual quiere enviar el cliente
- *         fecha:
+ *           description: Es el mensaje que quiere enviar el cliente
+ *         fechaActual:  # Cambiado a 'fechaActual'
  *           type: string
- *           description: Fecha del dia el cual se envia el mensaje
+ *           description: Fecha del día en que se envía el mensaje
  *       required:
  *         - nombre_apellido
  *         - correo
  *         - asunto
  *         - mensaje
- *         - fecha
+ *         - fechaActual  # Cambiado a 'fechaActual'
  */
+
 /**
  * @swagger
  * /api/contactos:
@@ -45,7 +46,7 @@ const router = express.Router();
  *           schema:
  *             $ref: '#/components/schemas/Contacto'
  *     responses:
- *       200:
+ *       201:  # Cambiado a 201 para reflejar la creación exitosa
  *         description: Mensaje enviado exitosamente
  */
 router.post("/contactos", createContacto);
@@ -54,7 +55,7 @@ router.post("/contactos", createContacto);
  * @swagger
  * /api/contactos:
  *   get:
- *     summary: Obtiene todas los mensajes enviados por los clientes
+ *     summary: Obtiene todos los mensajes enviados por los clientes
  *     tags: [Contactos]
  *     responses:
  *       200:
@@ -69,47 +70,47 @@ router.post("/contactos", createContacto);
 router.get("/contactos", getContacto);
 
 /**
- * @swagger
- * /api/contactos/{id}:
- *   get:
- *     summary: Obtiene los mensajes por id
- *     tags: [Contactos]
- *     parameters:
- *       - in: path
- *         name: id
- *         requiered: true
- *         schema:
- *           type: string
- *         description: Id del mensaje
- *     responses: 
- *       200:
- *         description: Informacion del mensaje especifico
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Contacto' 
- */
+* @swagger
+* /api/contactos/{id}:
+*   get:
+*     summary: Obtiene el mensaje por ID
+*     tags: [Contactos]
+*     parameters:
+*       - in: path
+*         name: id
+*         required: true  # Corregido 'requiered' a 'required'
+*         schema:
+*           type: string
+*         description: ID del mensaje
+*     responses: 
+*       200:
+*         description: Información del mensaje específico
+*         content:
+*           application/json:
+*             schema:
+*               $ref: '#/components/schemas/Contacto' 
+*/
 router.get("/contactos/:id", getContactoById);
 
 /**
- * @swagger
- * /api/contactos/{id}:
- *   delete:
- *     summary: Elimina los mensajes por id
- *     tags: [Contactos]
- *     parameters:
- *       - in: path
- *         name: id
- *         requiered: true
- *         schema:
- *           type: string
- *         description: Id del mensaje
- *     responses: 
- *       200:
- *         description: Mensaje eliminado exitosamente
- *       404:
- *         description: Mensaje no encontrado
- */
+* @swagger
+* /api/contactos/{id}:
+*   delete:
+*     summary: Elimina el mensaje por ID
+*     tags: [Contactos]
+*     parameters:
+*       - in: path
+*         name: id
+*         required: true  # Corregido 'requiered' a 'required'
+*         schema:
+*           type: string
+*         description: ID del mensaje
+*     responses: 
+*       200:
+*         description: Mensaje eliminado exitosamente
+*       404:
+*         description: Mensaje no encontrado
+*/
 router.delete("/contactos/:id", deleteContacto);
 
 export default router;

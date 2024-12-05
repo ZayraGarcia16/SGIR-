@@ -33,5 +33,5 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
     console.log(`Se esta ejecutando el servidor en el puerto ${port}.`);
-    swaggerDocs(app, 4000);
+    swaggerDocs(app, 7700);
 });
