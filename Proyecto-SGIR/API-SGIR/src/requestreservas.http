@@ -1,0 +1,51 @@
+### Crear una nuevo reserva
+POST http://localhost:7700/api/reservas HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "tipoDocumento": "Cédula de Ciudadanía",
+  "numeroDocumento": "123456789",
+  "cliente": "60b74ef5f0c6d6d3c8c907b7",
+  "fechaSalida": "2024-12-10",
+  "fechaRegreso": "2024-12-15",
+  "destino": "Bogotá",
+  "hotel": "60b74f11f0c6d6d3c8c907b8",
+  "paquete": "60b74f41f0c6d6d3c8c907b9",
+  "excursion": "60b74f71f0c6d6d3c8c907ba",
+  "numeroContacto": "3101234567",
+  "cantidadPersonas": 2,
+  "alojamiento": "Hotel 5 estrellas",
+  "transporte": "Bus",
+  "precioTotal": 1500000,
+  "estado": "Confirmada"
+}
+###
+
+### Obtener todas las reservas
+GET http://localhost:7700/api/reservas HTTP/1.1
+###
+
+### Obtener una reserva específica por ID
+
+GET http://localhost:7700/api/reservas/673e95cd0fb6ea1a967ac8d0 HTTP/1.1
+###
+
+### Actualizar una reserva específica por ID
+
+PUT http://localhost:7700/api/reservas/673d8877976b815d1693fe66 HTTP/1.1
+Content-Type: application/json
+
+{
+    "tipoDocumento": "Pasaporte",
+    "numeroDocumento": 87654321,
+    "nombreCliente": "María López",
+    "destino": "Bogotá",
+    "fechaInicio": "2024-01-10",
+    "fechaRegreso": "2024-01-15",
+    "estado": "Reprogramada"
+}
+###
+
+### Eliminar una reserva específica por ID
+DELETE http://localhost:7700/api/reservas/ HTTP/1.1

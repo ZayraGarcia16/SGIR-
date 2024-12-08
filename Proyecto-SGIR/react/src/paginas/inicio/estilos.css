@@ -1,0 +1,324 @@
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.agency-right-side img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 100px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    color: #f4f4f4;
+}
+
+ul li a, .active-link {
+    color: white;
+    font-size: 16px;
+}
+
+ul li a:hover {
+    color: #FFD700;
+}
+
+.menu-btn, .close-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        font-size: 24px;
+        color: white;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    ul li {
+        margin-top: 10px;
+    }
+
+    .btn {
+        display: block;
+    }
+
+    .close-btn {
+        display: block;
+        font-size: 24px;
+        color: white;
+    }
+
+    .active-link {
+        color: #FFD700;
+    }
+}
+
+/* Slider */
+.slide-container {
+    width: 100%;
+    height: 100%px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    
+}
+
+.img-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.img-overlay h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.img-overlay p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Sección sobre nosotros */
+.container3 {
+
+    max-width: 1200px;
+    margin: 90px auto;
+    padding: 0 20px;
+}
+
+.about-content-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.agency-left-side {
+    flex: 1;
+}
+
+.headings {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.tw {
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.agency-right-side {
+    flex: 1;
+}
+
+.img img {
+    border-radius: 10px;
+}
+
+/* Sección Servicios */
+
+.servicios {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.servicios .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.column {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-wrapper {
+    font-size: 40px;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.titulo h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Testimonios */
+.testimonial-area {
+    background-color: #fafafa;
+    padding: 50px 0;
+}
+
+.container5 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sec-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sec-title h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.testimonial-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    width: 100%; /* Ajusta según tu diseño */
+}
+
+.single-testimonial {
+    flex: 1 0 calc(100% / 3); /* Muestra 3 elementos */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.single-testimonial p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.client-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.client-pic img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.client-details {
+    font-size: 16px;
+}
+
+.client-details h6 {
+    font-weight: bold;
+}
+
+.client-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 18px;
+}
+
+.filled {
+    color: #FFD700;
+}
+
+.empty {
+    color: #ddd;
+}
+
+.control-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.prev-btn, .next-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #FFD700;
+}
+
+/* Footer */
+ footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
