@@ -30,7 +30,7 @@ mongoose
 app.use('/api/paquete', paqueteRouter);
 app.use('/api/admin', adminRouter);
 
-const port = process.env.PORT || 9002;
+const port = process.env.PORT || 7700;
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`)

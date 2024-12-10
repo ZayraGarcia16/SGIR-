@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 dotenv.config(); 
 
-const port = process.env.PORT || 9002;
+const port = process.env.PORT || 7700;
 
 const clientOptions = {
   serverApi: {

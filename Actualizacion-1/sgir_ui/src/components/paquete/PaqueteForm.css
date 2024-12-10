@@ -1,4 +1,4 @@
-/* src/components/UserForm.css */
+/* src/components/PaqueteForm.css */
 .paquete-Form {
     padding: 20px;
     background-color: #ffffff;
@@ -7,7 +7,8 @@
     margin-top: 20px;
 }
 
-.paquete-Form input {
+.paquete-Form input,
+.paquete-Form select {
     width: calc(100% - 24px);
     padding: 10px;
     margin: 10px 0;
@@ -29,4 +30,14 @@
 
 .paquete-Form button:hover {
     background-color: #5c0318;
+}
+
+/* Agregando estilo a los select */
+.paquete-Form select {
+    appearance: none;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23999' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px 5px;
 }

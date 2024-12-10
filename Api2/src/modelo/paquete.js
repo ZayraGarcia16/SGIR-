@@ -18,7 +18,7 @@ const PaqueteSchema = new mongoose.Schema({
     },
   categoria: { 
     type: String, 
-    enum: ['paquete1', 'paquete2', 'paquete3'],
+    enum: ['paquete1', 'paquete2', 'paquete3', 'paquete4'],
     required: true
    },
   precio: { 

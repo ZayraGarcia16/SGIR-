@@ -53,10 +53,10 @@ const numeroPersonas = Joi.number()
 
 // Definición de la categoría
 const categoria = Joi.string()
-  .valid("paquete1", "paquete2", "paquete3")
+  .valid("paquete1", "paquete2", "paquete3", "paquete4")
   .required()
   .messages({
-    "any.only": "La categoría debe ser 'paquete1', 'paquete2' o 'paquete3'.",
+    "any.only": "La categoría debe ser 'paquete1', 'paquete2', 'paquete3' o 'paquete4'.",
     "any.required": "La categoría es un campo requerido.",
   });
 

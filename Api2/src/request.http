@@ -1,14 +1,14 @@
 ### Crear un nuevo paquete
-POST http://localhost:9002/api/paquete HTTP/1.1
+POST http://localhost:7700/api/paquete HTTP/1.1
 Content-Type: application/json
 
 {
     "destino": "Santa Marta",
     "actividad": "Buceo",
     "numeroPersonas": 6,
-    "categoria": "Paquete 2",
+    "categoria": "paquete4",
     "precio": 1000000,
-    "transporte": "Avion",
+    "transporte": "bus",
     "comida": "todoincluido",
     "imagen": "http://www.ejemplo.com/imagen.jpg"
 }
@@ -17,13 +17,13 @@ Content-Type: application/json
 ###
 
 ### Obtener todos los paquetes
-GET http://localhost:9002/api/paquete HTTP/1.1
+GET http://localhost:7700/api/paquete HTTP/1.1
 ###
 
 
 
 ### Actualizar un paquete específico por ID
-PUT http://localhost:9002/api/paquete/67369650e84a0cc43752579e HTTP/1.1
+PUT http://localhost:7700/api/paquete/67369650e84a0cc43752579e HTTP/1.1
 Content-Type: application/json
 
 {
@@ -38,7 +38,7 @@ Content-Type: application/json
 ###
 
 ### Eliminar un paquete específico por ID
-DELETE http://localhost:9002/api/paquete/67478971291808bb22cfd131 HTTP/1.1
+DELETE http://localhost:7700/api/paquete/67478971291808bb22cfd131 HTTP/1.1
 
 
 
